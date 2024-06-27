@@ -17,10 +17,7 @@ export default {
         time: "",
         checkbox: false,
       });
-      console.log("Added new key result:", selectedItem.value.tasks);
     };
-
-    console.log("SelectedItemUpdate:", selectedItem.value);
 
     const removeKeyResult = (kIndex) => {
       if (selectedItem.value && kIndex > -1) {
@@ -71,7 +68,6 @@ export default {
   },
   methods: {
     updateTodo() {
-      console.log("Selected Item Updated: ", selectedItem.value);
       this.$router.push({ name: "todo-list" });
       this.showNotify();
     },

@@ -123,14 +123,6 @@ export default {
       tasks: [],
     }));
 
-    watch(
-      this.selectedItem,
-      (newValue, oldValue) => {
-        console.log("selectedItem changed:", newValue);
-      },
-      { deep: true }
-    );
-
     if (savedTodoForm.value.length > 0) {
       savedTodoForm.value.forEach((newTask) => {
         const existingTaskIndex = this.todoList.findIndex(
@@ -171,9 +163,6 @@ export default {
       }
 
       selectedItem.value = {};
-
-      console.log("Updated todoList:", this.todoList);
-      console.log("Cleared selectedItem:", selectedItem.value);
     }
   },
 
@@ -186,7 +175,6 @@ export default {
               doneTask.task_title === task.task_title &&
               doneTask.date === task.date
           );
-          console.log("foundIndex: ", foundIndex);
           if (foundIndex !== -1) {
             task.tasks.forEach((keyTask, index) => {
               if (keyTask.checkbox) {
@@ -200,7 +188,6 @@ export default {
                   .tasks.splice(index, 1);
                 this.moveSuccess("Task has been moved to Done List");
               }
-              console.log("DoneTasks:", this.doneList);
             });
           }
         });
@@ -228,7 +215,6 @@ export default {
                   .tasks.splice(index, 1);
                 this.moveSuccess("Task has been moved to To-do List");
               }
-              console.log("Todo List:", this.todoList);
             });
           }
         });
@@ -239,8 +225,6 @@ export default {
 
   methods: {
     toggleMenu(index) {
-      console.log(this.showMenu);
-      console.log(index);
       currentIndex.value = index;
     },
 
@@ -249,7 +233,6 @@ export default {
       const task = this.todoList[taskIndex];
       if (task) {
         selectedItem.value = task;
-        console.log("selectedItemTodo:", selectedItem.value);
         this.$router.push({ name: "update-todo", params: { id: taskIndex } });
       } else {
         console.error("Task not found at index:", currentIndex.value);
@@ -259,8 +242,6 @@ export default {
     deleteTodo(acceptDelete) {
       if (acceptDelete) {
         const indexToDelete = currentIndex.value;
-
-        console.log("makadelete");
 
         if (indexToDelete !== null && indexToDelete !== -1) {
           this.todoList.splice(indexToDelete, 1);

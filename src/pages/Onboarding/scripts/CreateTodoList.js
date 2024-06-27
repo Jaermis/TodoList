@@ -26,7 +26,6 @@ export const addNewTodo = (task_title, form, router, showNotify) => {
 
   // Save the todo list
   savedTodoForm.value.push(newTodoList);
-  console.log(savedTodoForm.value);
 
   // Show success notification
   if (showNotify && typeof showNotify === "function") {
