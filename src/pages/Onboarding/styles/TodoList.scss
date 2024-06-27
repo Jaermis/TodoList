@@ -1,8 +1,31 @@
 .todo-list {
+  .pt-40 {
+    padding-top: 40px;
+  }
+  .mt-38 {
+    margin-top: 38px;
+  }
   .in-progress {
-    height: 32px;
+    height: 33px;
     width: 122px;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+  }
+  .list-progress {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  :deep(.q-expansion-item) {
+    .q-focus-helper {
+      visibility: hidden;
+    }
+  }
+
+  .edit {
+    margin-top: 10px;
+  }
+  .delete {
+    margin-bottom: 10px;
   }
 }

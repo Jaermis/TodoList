@@ -1,24 +1,30 @@
 <template>
-	<div class="row">
-		<div class="col-12 col-sm-12 col-md-3" v-if="$q.screen.width >= 1024">
-			<div class="onboarding-menu onboarding-bg-primary onboarding-text-primary side full-height">
-				<div class="content">
-					<div class="q-py-md q-pl-md">
-						<h5 class="text-28 text-semibold q-my-none q-ml-md q-mt-md">Menu</h5>
-					</div>
-					<MainMenu />
-				</div>
-			</div>
-		</div>
-		<div
-			class="col-12 col-sm-12 col-md-9"
-			:class="`${$q.screen.width >= 768 && 'q-pr-lg'} ${$q.screen.width >= 1024 && 'q-pl-md'}`"
-		>
-			<div class="main onboarding-bg-primary relative-position">
-				<router-view />
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col-12 col-sm-12 col-md-3" v-if="$q.screen.width >= 1024">
+      <div
+        class="onboarding-menu onboarding-bg-primary onboarding-text-primary side full-height"
+      >
+        <div class="content">
+          <div class="q-py-md q-pl-md">
+            <h5 class="text-28 text-semibold q-my-none q-ml-md q-mt-md">
+              Menu
+            </h5>
+          </div>
+          <MainMenu />
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-12 col-sm-12 col-md-9"
+      :class="`${$q.screen.width >= 768 && 'q-pr-lg'} ${
+        $q.screen.width >= 1024 && 'q-pl-md'
+      }`"
+    >
+      <div class="main onboarding-bg-primary relative-position">
+        <router-view />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -43,7 +49,7 @@ export default {
 <style lang="scss">
 .side,
 .main {
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
 
   @media only screen and (max-width: 767px) {
     overflow-y: scroll;
@@ -52,5 +58,8 @@ export default {
   @media only screen and (min-width: 768px) {
     border-radius: 15px 15px 0px 0px;
   }
+}
+.onboarding-menu {
+  position: sticky;
 }
 </style>

@@ -320,6 +320,9 @@
     margin-right: 10px;
     color: $accent-3;
   }
+  &.height-24 {
+    height: 24px;
+  }
   &.height-31 {
     height: 31px;
   }
@@ -514,7 +517,7 @@
     }
   }
   ::placeholder {
-    opacity: 1;
+    opacity: 0.5;
   }
   .q-field__control {
     padding: 0 15px 15px;
@@ -793,19 +796,21 @@
 
 // Standard form width
 .standard-form-width {
+  width: 456px; // Default width
+
   @media screen and (min-width: $breakpoint-sm-min) {
-    // 768
-    width: 300px;
+    // 768px
+    width: 456px; // Keeping the default width for this breakpoint
   }
 
   @media screen and (min-width: $breakpoint-sm-max) {
-    // 1023
-    width: 292px;
+    // 1023px
+    width: 444px; // (292 / 300) * 456 ≈ 444
   }
 
   @media screen and (min-width: $breakpoint-lg-max) {
-    // 1919
-    width: 318px;
+    // 1919px
+    width: 483px; // (318 / 300) * 456 ≈ 483
   }
 }
 

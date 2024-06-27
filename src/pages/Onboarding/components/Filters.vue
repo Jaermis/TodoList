@@ -34,7 +34,7 @@
           v-if="isSearchVisible"
           :class="`${
             !isLabelVisible ? 'minmax-width-190' : 'minmax-width'
-          } onboarding-border-radius-50 onboarding-border-accent-0 onboarding-input-field height-${fieldHeight} use-input q-px-md ${
+          } onboarding-border-radius-50 onboarding-border-accent-1 onboarding-input-field height-${fieldHeight} use-input q-px-md ${
             isLabelVisible && 'q-mr-md'
           }`"
           dense
@@ -46,14 +46,9 @@
             <q-icon
               v-if="keyword"
               name="close"
+              size="14px"
               @click="fetchAll()"
-              class="cursor-pointer onboarding-text-accent-0"
-            />
-            <q-icon
-              @click="searchKeyword()"
-              class="onboarding-text-accent-0 cursor-pointer"
-              :class="!keyword && 'disabled'"
-              name="search"
+              class="cursor-pointer onboarding-text-accent-1"
             /> </template
         ></q-input>
         <q-select
@@ -67,7 +62,7 @@
           map-options
           option-value="value"
           option-label="label"
-          :class="`minmax-width onboarding-border-accent-0 onboarding-border-radius-50 onboarding-select-field height-31 text-14 ${
+          :class="`minmax-width onboarding-border-accent-0 onboarding-border-radius-50 onboarding-select-field height-24 text-14 ${
             isLabelVisible && 'q-mr-md'
           }`"
           :label="date_session !== null ? '' : 'Date'"
@@ -281,7 +276,7 @@ export default {
     },
     dynamicHeight: {
       type: String,
-      default: "31",
+      default: "24",
     },
   },
   setup(props) {

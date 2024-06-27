@@ -9,19 +9,25 @@
             <q-icon
               name="iconfont icon-user-management-fill"
               class="list-icon"
+              color="primary"
             />
           </q-item-section>
-          <q-item-section class="list-text">O.R. Numbers</q-item-section>
+          <q-item-section class="list-text text-primary"
+            >O.R. Numbers</q-item-section
+          >
         </q-item>
         <!-- OR NUMBERS -->
         <q-item clickable v-ripple :to="{ name: 'todo-list' }">
           <q-item-section avatar class="margin-left-10">
             <q-icon
-              name="iconfont icon-user-management-fill"
+              name="iconfont icon-task-list-fill"
               class="list-icon"
+              color="primary"
             />
           </q-item-section>
-          <q-item-section class="list-text">Todo List</q-item-section>
+          <q-item-section class="list-text text-primary"
+            >Todo List</q-item-section
+          >
         </q-item>
       </q-list>
       <div class="absolute-bottom">

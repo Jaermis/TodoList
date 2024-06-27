@@ -62,6 +62,16 @@ const routes = [
             name: "todo-list",
             component: () => import("../pages/Onboarding/TodoList.vue"),
           },
+          {
+            path: "create-todo",
+            name: "create-todo",
+            component: () => import("../pages/Onboarding/CreateTodoList.vue"),
+          },
+          {
+            path: "update-todo/:id?",
+            name: "update-todo",
+            component: () => import("../pages/Onboarding/UpdateTodoList.vue"),
+          },
         ],
       },
     ],
@@ -70,11 +80,9 @@ const routes = [
     path: "/login",
     component: () => import("../pages/Login.vue"),
   },
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: "/:catchAll(.*)*",
-    component: () => import("pages/Error404.vue"),
+    component: () => import("../pages/Error404.vue"),
   },
 ];
 
