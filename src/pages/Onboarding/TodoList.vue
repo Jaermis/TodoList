@@ -39,7 +39,7 @@
           </div>
 
           <div
-            class="col q-pa-md onboarding-bg-secondary onboarding-border-accent-0 onboarding-border-radius-10 q-mr-md"
+            class="exp-div col q-pa-md onboarding-bg-secondary onboarding-border-accent-0 onboarding-border-radius-10 q-mr-md"
             v-for="(todo, index) in todoList"
             :key="index"
           >
@@ -136,7 +136,7 @@
             Done
           </div>
           <div
-            class="col q-pa-md onboarding-bg-secondary onboarding-border-accent-0 onboarding-border-radius-10"
+            class="exp-div col q-pa-md onboarding-bg-secondary onboarding-border-accent-0 onboarding-border-radius-10"
             v-for="(todo, index) in doneList"
             :key="index"
           >

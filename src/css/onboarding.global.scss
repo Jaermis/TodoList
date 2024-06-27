@@ -796,21 +796,19 @@
 
 // Standard form width
 .standard-form-width {
-  width: 456px; // Default width
-
   @media screen and (min-width: $breakpoint-sm-min) {
     // 768px
-    width: 456px; // Keeping the default width for this breakpoint
+    width: 300px; // Keeping the default width for this breakpoint
   }
 
   @media screen and (min-width: $breakpoint-sm-max) {
     // 1023px
-    width: 444px; // (292 / 300) * 456 ≈ 444
+    width: 292px; // (292 / 300) * 456 ≈ 444
   }
 
   @media screen and (min-width: $breakpoint-lg-max) {
     // 1919px
-    width: 483px; // (318 / 300) * 456 ≈ 483
+    width: 318px; // (318 / 300) * 456 ≈ 483
   }
 }
 
