@@ -11,7 +11,13 @@
           <div
             class="flex justifty-start itempt-center onboarding-text-accent-0 q-mt-sm q-mb-lg z gt-xs"
           >
-            <q-btn round dense flat icon="arrow_back" />
+            <q-btn
+              @click="$router.push({ name: 'table-exercise' })"
+              round
+              dense
+              flat
+              icon="arrow_back"
+            />
             <h5 class="text-26 text-semibold q-my-none q-ml-sm">
               {{ dataDetails.receipt_type }} Details
             </h5>

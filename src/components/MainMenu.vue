@@ -4,7 +4,7 @@
     <div class="onboarding-menu-scroll">
       <q-list>
         <!-- OR NUMBERS -->
-        <q-item clickable v-ripple :to="{ name: 'or-numbers' }">
+        <!--<q-item clickable v-ripple :to="{ name: 'or-numbers' }">
           <q-item-section avatar class="margin-left-10">
             <q-icon
               name="iconfont icon-user-management-fill"
@@ -15,7 +15,7 @@
           <q-item-section class="list-text text-primary"
             >O.R. Numbers</q-item-section
           >
-        </q-item>
+        </q-item>-->
         <!-- OR NUMBERS -->
         <q-item clickable v-ripple :to="{ name: 'todo-list' }">
           <q-item-section avatar class="margin-left-10">
@@ -29,6 +29,19 @@
             >Todo List</q-item-section
           >
         </q-item>
+        <!-- TODO TABLE -->
+        <q-item clickable v-ripple :to="{ name: 'table-exercise' }">
+          <q-item-section avatar class="margin-left-10">
+            <q-icon
+              name="iconfont icon-user-management-fill"
+              class="list-icon"
+              color="primary"
+            />
+          </q-item-section>
+          <q-item-section class="list-text text-primary"
+            >Table Exercise</q-item-section
+          >
+        </q-item>
       </q-list>
       <div class="absolute-bottom">
         <q-list>
@@ -37,7 +50,7 @@
               <q-icon name="logout" class="list-icon" />
             </q-item-section>
             <q-item-section class="list-text onboarding-text-primary"
-              >Logout</q-item-section
+              >Todo Table</q-item-section
             >
           </q-item>
         </q-list>

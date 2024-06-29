@@ -72,6 +72,26 @@ const routes = [
             name: "update-todo",
             component: () => import("../pages/Onboarding/UpdateTodoList.vue"),
           },
+          {
+            path: "table-exercise",
+            name: "table-exercise",
+            component: () => import("../pages/TableExercise/ORNumbers.vue"),
+          },
+          {
+            path: "view-or/:id?",
+            name: "view-or",
+            component: () => import("../pages/TableExercise/ViewORNumbers.vue"),
+          },
+          {
+            path: "create-or",
+            name: "create-or",
+            component: () => import("../pages/TableExercise/AddORNumbers.vue"),
+          },
+          {
+            path: "update-or/:id?",
+            name: "update-or",
+            component: () => import("../pages/TableExercise/AddORNumbers.vue"),
+          },
         ],
       },
     ],
