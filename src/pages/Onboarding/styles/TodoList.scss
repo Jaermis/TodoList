@@ -1,0 +1,36 @@
+.todo-list {
+  .pt-40 {
+    padding-top: 40px;
+  }
+  .mt-38 {
+    margin-top: 38px;
+  }
+  .in-progress {
+    height: 33px;
+    width: 122px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .list-progress {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  .exp-div {
+    margin-top: -7px;
+    margin-bottom: 15px;
+    border-radius: 0 10 10 10 !important;
+  }
+  :deep(.q-expansion-item) {
+    .q-focus-helper {
+      visibility: hidden;
+    }
+  }
+
+  .edit {
+    margin-top: 10px;
+  }
+  .delete {
+    margin-bottom: 10px;
+  }
+}

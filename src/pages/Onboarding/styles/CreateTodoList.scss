@@ -1,0 +1,42 @@
+.create-todo-list {
+  .pt-40 {
+    padding-top: 40px;
+  }
+  .border-dashed {
+    border: 1px dashed #249990;
+  }
+  :deep(.q-expansion-item) {
+    .q-focus-helper {
+      visibility: hidden;
+    }
+  }
+  :deep(.q-time) {
+    .q-time__header {
+      background-color: transparent;
+      font-weight: 900;
+      padding: 0;
+      line-height: 1;
+      color: black;
+    }
+    .q-time__header-label {
+      font-size: 40px;
+    }
+    .q-time__link {
+      opacity: 1;
+    }
+    .q-time__link--active {
+      color: #249990;
+    }
+    .q-time__clock {
+      color: #249990;
+      font-weight: 900;
+    }
+    .q-time__container-child {
+      background-color: transparent;
+      outline: auto #249990;
+    }
+    .q-time__clock-pointer::before {
+      display: none;
+    }
+  }
+}
